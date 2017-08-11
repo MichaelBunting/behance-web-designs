@@ -1,0 +1,77 @@
+.tile {
+    transition: all .3s;
+    border: 1px solid $charcoal;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba($charcoal, .2);
+
+    &:hover {
+        transform: translate(0, -10px);
+        box-shadow: 0 10px 20px rgba($charcoal, .2);
+        text-decoration: none;
+    }
+
+    &-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &-block {
+        flex: 1 1 25%;
+        display: flex;
+        padding: 40px;
+    }
+
+    &__img {
+        width: 100%;
+        padding-bottom: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    &__content {
+        padding: 10px;
+        text-align: center;
+        margin: 0 -20px;
+    }
+
+    &__name {
+        font-size: 23px;
+        font-weight: 700;
+        margin: 10px 0;
+    }
+
+    &__owner {
+        margin: 5px 0;
+        font-size: 18px;
+    }
+
+    &__username {
+        color: $light-gray;
+        font-style: italic;
+        font-size: 13px;
+    }
+
+    &__fields {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+
+        li {
+            display: table;
+            padding: 2px 6px;
+            border: 1px solid $charcoal;
+            font-size: 12px;
+            margin: 3px;
+            text-transform: lowercase;
+            opacity: .6;
+        }
+    }
+}

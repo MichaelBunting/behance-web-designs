@@ -1,3 +1,4 @@
+const dotenv = require('dotenv').config();
 const express = require('express');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpack = require('webpack');
@@ -17,6 +18,8 @@ app.use(webpackDevMiddleware(compiler, {
 }));
 
 app.use(express.static(__dirname + '/www'));
+
+const routes = require('./routes')(app);
 
 const server = app.listen(3000, function() {
     const host = server.address().address;

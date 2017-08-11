@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $roboto;
+    color: $charcoal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    // margin: 0;
+    // padding: 0;
+}
+
+a {
+    color: $charcoal;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
